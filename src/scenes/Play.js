@@ -28,9 +28,9 @@ class Play extends Phaser.Scene {
             'rocket').setOrigin(0.5, 0);
 
         // add ships
-        this.ship1 = new Spaceship (this, 100, 200, 'spaceship').setOrigin(0,0);
-        this.ship2 = new Spaceship (this, 100, 200, 'spaceship').setOrigin(0,0);
-        this.ship3 = new Spaceship (this, 100, 200, 'spaceship').setOrigin(0,0);
+        //this.ship1 = new Spaceship (this, 100, 200, 'spaceship').setOrigin(0,0);
+        //this.ship2 = new Spaceship (this, 100, 200, 'spaceship').setOrigin(0,0);
+        //this.ship3 = new Spaceship (this, 100, 200, 'spaceship').setOrigin(0,0);
         
         // define keys
         keyF = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F);
@@ -45,21 +45,10 @@ class Play extends Phaser.Scene {
         // update rocket
         this.p1Rocket.update();
         
-        this.ship1.update();
-        this.ship2.update();
-        this.ship3.update();
+        //this.ship1.update();
+        //this.ship2.update();
+        //this.ship3.update();
 
-        if(false){
-            if(rocket.x + rocket.width / 2 > ship.x &&
-               rocket.x - rocket.width / 2< ship.x + ship.width / 2 &&
-               rocket.y + rocket.height / 2> ship.y && 
-               rocket.y - rocket.height / 2 < ship.y + ship.height / 2){
-                   ship.alpha = 0;
-                   // play kaboom animation & sound
-                   // score++;
-                   rocket.reset();
-                   ship.reset();
-               }
-        }
+        
     }
 }
