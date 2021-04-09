@@ -25,7 +25,7 @@ class Play extends Phaser.Scene {
 
         // add rocket
         this.p1Rocket = new Rocket(this, game.config.width / 2, game.config.height - borderUISize,
-            'rocket');
+            'rocket').setOrigin(0.5, 0);
 
         // add ships
         this.ship1 = new Spaceship (this, 100, 200, 'spaceship').setOrigin(0,0);
@@ -44,7 +44,7 @@ class Play extends Phaser.Scene {
 
         // update rocket
         this.p1Rocket.update();
-
+        
         this.ship1.update();
         this.ship2.update();
         this.ship3.update();
