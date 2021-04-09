@@ -1,11 +1,12 @@
 // Adds innocent spaceships that were minding their own business to massacre
 class Spaceship extends Phaser.GameObjects.Sprite {
-    constructor(scene, x, y, texture, frame){
+    constructor(scene, x, y, texture, frame, pointValue){
         super(scene, x, y, texture, frame);
 
         // add to scene
         scene.add.existing(this);
-        this.moveSpeed = 3;
+        this.points = pointValue;   // Stash points
+        this.moveSpeed = 3; // Slightly faster than rocket (by 1)
     }
     
     reset(){
