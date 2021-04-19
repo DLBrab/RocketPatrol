@@ -1,3 +1,10 @@
+/*  Brandon McDonald's Rocket patrol mod, finished April 19th 2021
+ *  Implements Simultaneous 2P mode (30), Additional time for successful hits (20),
+ *  A new, smaller spaceship that moves faster and is worth more points (20),
+ *  Parallax scrolling (10), Time display (10), Post-firing control (5) [at half speed]
+ *  Speed increase after 30 seconds, regardless of how much time is left on the clock (5).
+ */
+
 let config = {
     type: Phaser.CANVAS,
     width: 640,
