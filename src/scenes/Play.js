@@ -127,16 +127,16 @@ class Play extends Phaser.Scene {
         this.gover = this.add.text(game.config.width/2, game.config.height/2, 
             'GAME OVER', this.scoreConfiga).setOrigin(0.5);
 
-        this.resetti = this.add.text(game.config.width/2, game.config.height/2, 
-            '(F)ire to Restart, SHIFT to return to menu', this.scoreConfiga).setOrigin(0.5);
+        this.resetti = this.add.text(game.config.width/2, game.config.height/2 + 64, 
+            '(F)ire to Restart, or\nSHIFT to return to menu', this.scoreConfiga).setOrigin(0.5);
 
-        this.pawin = this.add.text(game.config.width/2, game.config.height * .75, 
+        this.pawin = this.add.text(game.config.width/2, game.config.height/2 + 192,  
             'Player 1 wins!', this.scoreConfiga).setOrigin(0.5);
 
-        this.pbwin = this.add.text(game.config.width/2, game.config.height * .75, 
+        this.pbwin = this.add.text(game.config.width/2, game.config.height/2 + 192, 
             'Player 2 wins!', this.scoreConfiga).setOrigin(0.5);
 
-        this.pdraw = this.add.text(game.config.width/2, game.config.height * .75, 
+        this.pdraw = this.add.text(game.config.width/2, game.config.height/2 + 192,  
             'Draw!', this.scoreConfiga).setOrigin(0.5);
     }
 
