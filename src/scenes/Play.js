@@ -122,22 +122,25 @@ class Play extends Phaser.Scene {
 
         
         // Invisible game over text
-        this.scoreConfiga.alpha = 0;
-
         this.gover = this.add.text(game.config.width/2, game.config.height/2, 
             'GAME OVER', this.scoreConfiga).setOrigin(0.5);
+        this.gover.alpha = 0;
 
         this.resetti = this.add.text(game.config.width/2, game.config.height/2 + 64, 
             '(F)ire to Restart, or\nSHIFT to return to menu', this.scoreConfiga).setOrigin(0.5);
+        this.resetti.alpha = 0;
 
-        this.pawin = this.add.text(game.config.width/2, game.config.height/2 + 192,  
+        this.pawin = this.add.text(game.config.width/2, game.config.height/2 + 128,  
             'Player 1 wins!', this.scoreConfiga).setOrigin(0.5);
+        this.pawin.alpha = 0;
 
-        this.pbwin = this.add.text(game.config.width/2, game.config.height/2 + 192, 
+        this.pbwin = this.add.text(game.config.width/2, game.config.height/2 + 128, 
             'Player 2 wins!', this.scoreConfiga).setOrigin(0.5);
+        this.pbwin.alpha = 0;
 
-        this.pdraw = this.add.text(game.config.width/2, game.config.height/2 + 192,  
+        this.pdraw = this.add.text(game.config.width/2, game.config.height/2 + 128,  
             'Draw!', this.scoreConfiga).setOrigin(0.5);
+        this.pdraw.alpha = 0;
     }
 
     // Thanks to https://gamedev.stackexchange.com/questions/182242/phaser-3-how-to-trigger-an-event-every-1-second
