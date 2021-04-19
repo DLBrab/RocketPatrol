@@ -141,6 +141,7 @@ class Play extends Phaser.Scene {
         this.pdraw = this.add.text(game.config.width/2, game.config.height/2 + 64,  
             'Draw!', this.scoreConfiga).setOrigin(0.5);
         this.pdraw.alpha = 0;
+        
         console.log("Who the hell orered all this goddamn crazy bread?");
     }
 
