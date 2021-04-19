@@ -122,23 +122,23 @@ class Play extends Phaser.Scene {
 
         
         // Invisible game over text
-        this.gover = this.add.text(game.config.width/2, game.config.height/2, 
+        this.gover = this.add.text(game.config.width/2, game.config.height/2 - 64, 
             'GAME OVER', this.scoreConfiga).setOrigin(0.5);
         this.gover.alpha = 0;
 
-        this.resetti = this.add.text(game.config.width/2, game.config.height/2 + 64, 
+        this.resetti = this.add.text(game.config.width/2, game.config.height/2, 
             '(F)ire to Restart, or\nSHIFT to return to menu', this.scoreConfiga).setOrigin(0.5);
         this.resetti.alpha = 0;
 
-        this.pawin = this.add.text(game.config.width/2, game.config.height/2 + 128,  
+        this.pawin = this.add.text(game.config.width/2, game.config.height/2 + 64,  
             'Player 1 wins!', this.scoreConfiga).setOrigin(0.5);
         this.pawin.alpha = 0;
 
-        this.pbwin = this.add.text(game.config.width/2, game.config.height/2 + 128, 
+        this.pbwin = this.add.text(game.config.width/2, game.config.height/2 + 64, 
             'Player 2 wins!', this.scoreConfiga).setOrigin(0.5);
         this.pbwin.alpha = 0;
 
-        this.pdraw = this.add.text(game.config.width/2, game.config.height/2 + 128,  
+        this.pdraw = this.add.text(game.config.width/2, game.config.height/2 + 64,  
             'Draw!', this.scoreConfiga).setOrigin(0.5);
         this.pdraw.alpha = 0;
         console.log("Who the hell orered all this goddamn crazy bread?");
