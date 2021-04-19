@@ -120,18 +120,24 @@ class Play extends Phaser.Scene {
         this.scoreConfiga.fixedWidth = 0;
         this.timer = 0;
 
+        
         // Invisible game over text
+        this.scoreConfiga.alpha = 0;
+
         this.gover = this.add.text(game.config.width/2, game.config.height/2, 
             'GAME OVER', this.scoreConfiga).setOrigin(0.5);
-        this.scoreConfiga.fixedWidth = 0;
-        this.gover.alpha = 0;
 
-        this.resetti = this.add.text((0, 0, 
-            '(F)ire to Restart, SHIFT to return to menu', this.scoreConfiga)).setOrigin(0.5);
-        this.resetti.alpha = 1;
+        this.resetti = this.add.text(game.config.width/2, game.config.height/2, 
+            '(F)ire to Restart, SHIFT to return to menu', this.scoreConfiga).setOrigin(0.5);
 
-        this.pmwin = this.add.text((game.config.width/2, game.config.height * .75, 
-            'Player m wins!', this.scoreConfiga)).setOrigin(0.5);
+        this.pawin = this.add.text(game.config.width/2, game.config.height * .75, 
+            'Player 1 wins!', this.scoreConfiga).setOrigin(0.5);
+
+        this.pbwin = this.add.text(game.config.width/2, game.config.height * .75, 
+            'Player 2 wins!', this.scoreConfiga).setOrigin(0.5);
+
+        this.pdraw = this.add.text(game.config.width/2, game.config.height * .75, 
+            'Draw!', this.scoreConfiga).setOrigin(0.5);
     }
 
     // Thanks to https://gamedev.stackexchange.com/questions/182242/phaser-3-how-to-trigger-an-event-every-1-second
@@ -142,7 +148,9 @@ class Play extends Phaser.Scene {
             this.gameOver = false;
             this.gover.alpha = 0;
             this.resetti.alpha = 0;
-            this.pmwin.alpha = 0;
+            this.pawin.alpha = 0;
+            this.pbwin.alpha = 0;
+            this.pdraw.alpha = 0;
             this.scene.restart();
         }
         else if(this.gameOver && Phaser.Input.Keyboard.JustDown(keySHIFT)){
@@ -185,7 +193,15 @@ class Play extends Phaser.Scene {
                 if(this.gameTime <= 0){
                     this.gover.alpha = 1;
                     this.resetti.alpha = 1;
-                    this.pmwin.alpha = 1;
+                    if(this.p1Score > this.p2Score){
+                        this.pawin.alpha = 1;
+                    }
+                    else if(this.p1Score == this.p2Score){
+                        this.pdraw.alpha = 1;
+                    }
+                    else{
+                        this.pbwin.alpha = 1;
+                    }
                     this.gameOver = true;
                 }
             }
