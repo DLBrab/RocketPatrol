@@ -44,7 +44,6 @@ class Menu extends Phaser.Scene {
     update () {
         if(Phaser.Input.Keyboard.JustDown(keyLEFT)){
             // Baby mode
-            console.log("Lefteous bro");
             game.settings = {
                 spaceshipSpeed: 2,
                 playerSpeed: 4,
@@ -54,7 +53,6 @@ class Menu extends Phaser.Scene {
             this.scene.start('playScene');
         }
         if (Phaser.Input.Keyboard.JustDown(keyRIGHT)){
-            console.log("Righteous bro");
             game.settings = {
                 spaceshipSpeed: 4,
                 playerSpeed: 2,
