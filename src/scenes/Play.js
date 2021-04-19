@@ -141,7 +141,7 @@ class Play extends Phaser.Scene {
         this.pdraw = this.add.text(game.config.width/2, game.config.height/2 + 128,  
             'Draw!', this.scoreConfiga).setOrigin(0.5);
         this.pdraw.alpha = 0;
-        console.log("Who the hell orered all this goddamn crazy bread?")
+        console.log("Who the hell orered all this goddamn crazy bread?");
     }
 
     // Thanks to https://gamedev.stackexchange.com/questions/182242/phaser-3-how-to-trigger-an-event-every-1-second
@@ -182,7 +182,7 @@ class Play extends Phaser.Scene {
             // update timer here.
             this.timer += delta;
             while(this.timer >= 1000){
-                this.gameTime -= 20;
+                this.gameTime -= 1;
                 this.timeLeft.text = this.gameTime;
                 this.timer -= 1000;
                 if(this.speedTimer <= 0){
